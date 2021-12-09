@@ -12,7 +12,7 @@ yarn install
 
 Once you are done, run the project with:
 ```
-npx react-native run-android
+expo start
 ```
 
 Once you open the app, you will appear on the Login screen, you will have to register an user first of all so click on the register button,
