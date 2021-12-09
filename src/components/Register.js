@@ -16,6 +16,7 @@ const Register = ({navigation}) => {
   const register = async () => {
     if (!validateRegister(userData)) {
       Alert.alert('Invalid register data!', INVALID_REGISTRATION_MESSAGE);
+      console.log("Invalid register")
       return;
     }
 

@@ -3,7 +3,7 @@ import {View, TextInput, StyleSheet, Button, Alert, Text} from 'react-native';
 import {UserContext} from '../context/authcontext';
 import {saveUserData} from '../helpers/auth';
 
-const Profile = () => {
+const Profile = ({navigation}) => {
   const {user, setUser} = useContext(UserContext);
   const [data, setData] = useState(user);
 
@@ -18,6 +18,7 @@ const Profile = () => {
     }
 
     Alert.alert('User modified successfully!');
+    console.log("User modified successfully")
   };
 
   return (
@@ -51,6 +52,11 @@ const Profile = () => {
         color="#5EBEC4"
         onPress={() => modifyUser()}
       />
+      <Button
+        style={styles.submit}
+        title="Go back"
+        color="#5EBEC4"
+        onPress={() => navigation.push('Home')}/>
     </View>
   );
 };
